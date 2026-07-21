@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1368, height=801, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+  <title>Alkander — Interactive Character Sheet</title>
+  <link rel="stylesheet" href="styles.css?v=120" />
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <button id="layoutModeToggle" class="brand-mark layout-mode-toggle" type="button" title="Open settings" aria-label="Open settings">◖♫◗</button>
+      <nav id="tabs"></nav>
+      <button id="resetBtn" class="icon-btn" title="Freeze videos on first frame" aria-label="Freeze videos on first frame">Ⅱ</button>
+    </header>
+
+    <main>
+      <section id="combat" class="tab-page active"></section>
+      <section id="spells" class="tab-page"></section>
+      <section id="features" class="tab-page"></section>
+      <section id="skills" class="tab-page"></section>
+      <section id="inventory" class="tab-page"></section>
+      <section id="journal" class="tab-page"></section>
+    </main>
+  </div>
+
+  <dialog id="diceDialog">
+    <form method="dialog" class="dialog-card">
+      <button class="dialog-close" value="cancel">×</button>
+      <h2 id="diceTitle">Dice Roll</h2>
+      <div id="diceResult" class="dice-result">—</div>
+      <p id="diceBreakdown"></p>
+      <button value="ok" class="gold-btn">Close</button>
+    </form>
+  </dialog>
+
+  <script src="app.js?v=120"></script>
+</body>
+</html>
